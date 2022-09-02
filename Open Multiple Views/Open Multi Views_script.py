@@ -14,8 +14,8 @@ fromAutodesk.Revit.UIimportUIApplication, RevitCommandId, PostableCommand
 
 selection=revit.get_selection() 
 
-forvinselection: 
-	v_to_open=revit.doc.GetElement(v.Id) 
+forvinselection:
+    v_to_open=revit.doc.GetElement(v.Id) 
 	revit.uidoc.ActiveView=v_to_open 
 
 # activating views does NOT work in a transaction, but works fine kept OUTSIDE a transaction 
@@ -28,8 +28,7 @@ tile_windows = UI.RevitCommandId.LookupPostableCommandId(UI.PostableCommand.Tile
 uiapp.PostCommand(tile_windows) 
 ''' 
 
-​
-''' 
+​''' 
 zoom_extents = UI.RevitCommandId.LookupPostableCommandId(UI.PostableCommand.TileWindows) 
 #uiapp = UIApplication(doc.Application) 
 uiapp.PostCommand(zoom_extents) 
