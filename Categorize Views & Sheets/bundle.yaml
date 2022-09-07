@@ -1,0 +1,18 @@
+title: "Categorize Views & Sheets" 
+
+author: "William Lewis" 
+
+tooltip: "Tool to batch assign parameter values to View and Sheet objects, for categorization, sorting, and filtering in the Revit Project Browser"
+
+help_url: ""
+
+is_beta: False
+
+# minimium supported Revit version 
+min_revit_version: 2017
+
+# maximum supported Revit version 
+max_revit_version: 2017
+
+# Active context  
+context: doc-project 

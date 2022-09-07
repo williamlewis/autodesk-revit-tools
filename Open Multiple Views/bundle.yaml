@@ -1,18 +1,18 @@
 title: "Open Multi Views" 
-​ 
-author: "William Lewis" ​ 
 
-tooltip: "Utility to batch open multiple views or sheets selected from Project Browser" ​ 
+author: "William Lewis" 
 
-help_url: "" ​ 
+tooltip: "Utility to batch open multiple views or sheets selected from Project Browser"
 
-is_beta: False ​ 
+help_url: ""
+
+is_beta: False
 
 # minimium supported Revit version 
-min_revit_version: 2020 ​ 
+min_revit_version: 2020
 
 # maximum supported Revit version 
-max_revit_version: 2020 ​ 
+max_revit_version: 2020
 
 # Active context  
 context: doc-project 
