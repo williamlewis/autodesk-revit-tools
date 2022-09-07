@@ -1,5 +1,5 @@
-# Updates VIEW parameters as "AoR--WW View:  WW"
-# Updates SHEET parameters as "AoR--WW Sheet:  WW"
+# Updates VIEW parameters as "AoR--Owner View:  Owner"
+# Updates SHEET parameters as "AoR--Owner Sheet:  Owner"
 
 # Import "Revit Python Wrapper" library to simplify calls to Revit API
 import rpw
