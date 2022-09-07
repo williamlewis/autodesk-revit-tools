@@ -2,7 +2,7 @@ title: "Open Multi Views"
 
 author: "William Lewis" 
 
-tooltip: "Utility to batch open multiple views or sheets selected from Project Browser"
+tooltip: "Tool to open multiple View and Sheet objects when selected from the Revit Project Browser"
 
 help_url: ""
 
