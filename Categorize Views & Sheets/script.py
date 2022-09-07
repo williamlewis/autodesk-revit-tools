@@ -1,46 +1,33 @@
-'''
-Updates view parameters as "AoR--WW View:  WW".
-Updates sheet parameters as "AoR--WW Sheet:  WW".
-'''
+# Updates VIEW parameters as "AoR--WW View:  WW"
+# Updates SHEET parameters as "AoR--WW Sheet:  WW"
 
+# Import "Revit Python Wrapper" library to simplify calls to Revit API
 import rpw
 from rpw import doc
 
+
+# Collect view and sheet objects throughout document (Revit 3D model file)
 views = rpw.db.Collector(of_category="OST_Views", is_type=False).get_elements(wrapped=False)
 sheets = rpw.db.Collector(of_category="OST_Sheets", is_type=False).get_elements(wrapped=False)
 
+
+# Open Revit "transaction" to modify elements within file (closes automatically)
 with rpw.db.Transaction('Categorize Views & Sheets'):
+    # Populate / overwrite view parameter values
     for v in views:
         param = v.LookupParameter("AoR--WW View")
         try:
             param.Set("WW")
-            '''
-            if param.HasValue is False:
-                try:
-                    param.Set("WW")
-                except:
-                    pass
-            elif param.Value != "WW":
-                try:
-                    param.Set("WW")
-                except:
-                    pass
-                    '''
         except:
             pass
     
+    # Populate / overwrite sheet parameter values
     for s in sheets:
         param = s.LookupParameter("AoR--WW Sheet")
         try:
             param.Set("WW")
-            '''
-            if s.LookupParameter("AoR--WW Sheet").HasValue is False:
-                try:
-                    s.LookupParameter("AoR--WW Sheet").Set("WW")
-                except:
-                    pass
-                    '''
         except:
             pass
 
+# Notify user with pop-up message
 rpw.ui.forms.Alert('Views & Sheets categorized as "WW".\nCheck sorting in Project Browser.')
