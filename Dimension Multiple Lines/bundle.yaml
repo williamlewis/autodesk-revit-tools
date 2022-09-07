@@ -1,0 +1,18 @@
+title: "Dimension Multiple Lines" 
+
+author: "William Lewis" 
+
+tooltip: "Tool to place a dimension string object with \"witness lines\" attached to multiple parallel line objects when selected from the activated drawing view"
+
+help_url: ""
+
+is_beta: False
+
+# minimium supported Revit version 
+min_revit_version: 2017
+
+# maximum supported Revit version 
+max_revit_version: 2017
+
+# Active context  
+context: doc-project 
