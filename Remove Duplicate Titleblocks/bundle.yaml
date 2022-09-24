@@ -1,0 +1,18 @@
+title: "Remove Duplicate Titleblocks" 
+ 
+author: "William Lewis" 
+ 
+tooltip: "Purge duplicate titleblock instances on DWG sheets & ensure 'DWG Waiver' visibility checkbox is ticked to make note visible on all sheets" 
+ 
+help_url: "" 
+ 
+is_beta: False 
+ 
+# minimium supported Revit version 
+min_revit_version: 2020 
+ 
+# maximum supported Revit version 
+max_revit_version: 2020 
+ 
+# Active context  
+context: doc-project 
