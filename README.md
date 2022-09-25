@@ -1,9 +1,11 @@
 # autodesk-revit-tools
-Autodesk Revit assistive automations using Revit API + Iron Python language + pyRevit RAD environment
+Assistive automations using the Autodesk Revit API + Iron Python language + pyRevit rapid app development environment
 
-Repo to illustrate scripted automations with Autodesk Revit, a widespread 3D Building Information Modeling software used in the practice of architectural design & construction.
+
+Autodesk Revit is a widespread, 3D Building Information Modeling ("BIM") software used in the practice of architectural design & construction.
+
 <br/>
-<br/>
+
 ---
 
 ## Revit Add-ins using pyRevit
@@ -13,11 +15,8 @@ Repo to illustrate scripted automations with Autodesk Revit, a widespread 3D Bui
 - Dimension Multiple Lines
 - Categorize Views & Sheets
 
-
-
-
 <br/>
-<br/>
+
 ---
 
 ## Terminal Scripts for Revit User Managment
