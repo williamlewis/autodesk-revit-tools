@@ -10,4 +10,4 @@ This tool populates a shared parameter value which is used as a criteria for sor
 
 <br/>
 
-<img src="./Categorize Views & Sheets.gif" alt="pyRevit add-in in use" width="178%" height="500">
+<img src="./Categorize Views & Sheets.gif" alt="pyRevit add-in in use" width="100%" height="56.25%">
