@@ -6,7 +6,7 @@ The owner and its vendor (local Architect of Record) both need to collaborate wi
 
 File content such as sheeted drawings and working views should remain sorted and separated by company.
 
-This tool populates a shared parameter value which is used as a criteria for sorting within the Project Browser, based on project file template.
+This tool populates a shared parameter value which is used as a criteria for sorting within the Project Browser, based on a project file template.
 
 <br/>
 
