@@ -47,7 +47,7 @@ Autodesk Revit is a widespread, 3D Building Information Modeling ("BIM") softwar
 - **Auto Reinstall Revit Add-In** - purge previous add-in files from all possible locations, replace with latest version, & run executable installation file from a Google shared drive location
 <br/>
 
-    \----
+    --
 <br/>
 
 - **List Users from Filenames to Text** - convert set of filenames into a text file with linebreaks
