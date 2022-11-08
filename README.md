@@ -14,16 +14,16 @@ Autodesk Revit is a widespread, 3D Building Information Modeling ("BIM") softwar
 
 <br/>
 
-- [**Remove Duplicate Titleblocks**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Remove%20Duplicate%20Titleblocks%20(pyRevit%20Add-In)) - for subset of sheets, check for and purge duplicate titleblock classes, then overwrite shared parameter to ensure visibility of disclaimer note on remaining sheets
+- [**Remove Duplicate Titleblocks**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Revit%20Add-Ins%20Using%20pyRevit/Remove%20Duplicate%20Titleblocks) - for subset of sheets, check for and purge duplicate titleblock classes, then overwrite shared parameter to ensure visibility of disclaimer note on remaining sheets
 <br/>
 
-- [**Open Multiple Views**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Open%20Multiple%20Views%20(pyRevit%20Add-In)) - check user selection in Project Browser, then open multiple views and sheets to perform tasks in batches and expedite daily workflow
+- [**Open Multiple Views**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Revit%20Add-Ins%20Using%20pyRevit/Open%20Multiple%20Views) - check user selection in Project Browser, then open multiple views and sheets to perform tasks in batches and expedite daily workflow
 <br/>
 
-- [**Dimension Multiple Lines**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Dimension%20Multiple%20Lines%20(pyRevit%20Add-In)) - create a dimension string with witness lines on multiple parallel line classes, to expedite repeated annotation process
+- [**Dimension Multiple Lines**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Revit%20Add-Ins%20Using%20pyRevit/Dimension%20Multiple%20Lines) - create a dimension string with witness lines on multiple parallel line classes, to expedite repeated annotation process
 <br/>
 
-- [**Categorize Views & Sheets**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Categorize%20Views%20%26%20Sheets%20(pyRevit%20Add-In)) - overwrite a shared parameter value for view and sheet classes, to distinguish owner contents from future vendor contents within a shared file
+- [**Categorize Views & Sheets**](https://github.com/williamlewis/autodesk-revit-tools/tree/main/Revit%20Add-Ins%20Using%20pyRevit/Categorize%20Views%20%26%20Sheets) - overwrite a shared parameter value for view and sheet classes, to distinguish owner contents from future vendor contents within a shared file
 
 <br/>
 
