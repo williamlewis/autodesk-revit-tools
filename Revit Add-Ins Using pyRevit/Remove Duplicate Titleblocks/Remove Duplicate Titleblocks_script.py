@@ -10,12 +10,13 @@ doc = __revit__.ActiveUIDocument.Document
 output = script.get_output()
 
 
+
 #############################
 #### GET RELEVANT SHEETS ####
 #############################
 
 # get all sheets in document
-sheets = (
+all_sheets = (
     FilteredElementCollector(doc)
     .OfCategory(BuiltInCategory.OST_Sheets)
     .WhereElementIsNotElementType()
@@ -23,10 +24,10 @@ sheets = (
 )
 
 # filter sheets to get relevant 'DWG' category sheets, then store in dictionary
-dwgSheets = {}
-for sheet in sheets:
-    if "DWG Plan Export" in sheet.Name:
-        dwgSheets[sheet] = [
+dwg_sheets = {}
+for sheet in all_sheets:
+    if "DWG Plan Export" in sheet.Name: # sheet category name as defined in file template
+        dwg_sheets[sheet] = [
             sheet.SheetNumber,
             sheet.Name,
         ]
@@ -34,40 +35,42 @@ for sheet in sheets:
         pass
 
 
+
 ###########################################
 #### FIND & SORT DUPLICATE TITLEBLOCKS ####
 ###########################################
 
 # get & count titleblocks on DWG sheets, to determine if there are duplicate instances
-allDwgTbs = []
-for sheet in dwgSheets:
-    tbCount = 0
-    sheetTbs = []
+all_dwg_titleblocks = []
+for sheet in dwg_sheets:
+    titleblock_count = 0
+    titleblocks_on_sheet = []
 
     tblocks = revit.query.get_sheet_tblocks(sheet)
     for tblock in tblocks:
-        allDwgTbs.append(tblock)
+        all_dwg_titleblocks.append(tblock)
 
-        tbCount += 1
-        sheetTbs.append(tblock)
+        titleblock_count += 1
+        titleblocks_on_sheet.append(tblock)
 
-    dwgSheets[sheet].append(tbCount)
-    dwgSheets[sheet].append(sheetTbs)
+    dwg_sheets[sheet].append(titleblock_count)
+    dwg_sheets[sheet].append(titleblocks_on_sheet)
 
 # sort DWG sheet titleblocks into those to keep (latest) vs. those to delete (all others)
-listOfTbsToDelete = []
-listOfTBsToKeep = []
+titleblocks_to_delete = []
+titleblocks_to_keep = []
 
-for sheet in dwgSheets:
-    listOfSheetTbs=dwgSheets.get(sheet)[3]
+for sheet in dwg_sheets:
+    titleblocks_to_sort = dwg_sheets.get(sheet)[3]
 
-    for i in listOfSheetTbs:
+    for i in titleblocks_to_sort:
         if(
-            i == listOfSheetTbs[-1]
+            i == titleblocks_to_sort[-1]
         ):  # relies on the fact that element IDs are chronological (i.e. latest is probably correct), and that they were appended into a list ordered by element IDs
-            listOfTBsToKeep.append(i)
+            titleblocks_to_keep.append(i)
         else:
-            listOfTbsToDelete.append(i)
+            titleblocks_to_delete.append(i)
+
 
 
 #####################################################
@@ -79,11 +82,11 @@ t = Transaction(doc)
 try:
     # delete duplicate titleblocks in the "to-delete" list
     t.Start("Purge Duplicate Titleblocks")
-    for i in listOfTbsToDelete:
+    for i in titleblocks_to_delete:
         doc.Delete(i.Id)
     
     # make legal note visible on titleblocks in the "to-keep" list
-    for i in listOfTBsToKeep:
+    for i in titleblocks_to_keep:
         i.LookupParameter("DWG Waiver On").Set( # parameter name as defined in file template
             1
         )  # integer 1 indicates that checkbox value is checked (i.e. Yes for Y/N)
@@ -93,15 +96,16 @@ except:
     print("transaction had to roll back")
 
 
+
 ################################
 #### PRINT RESULTS FOR USER ####
 ################################
 
 # print latest results for visual confirmation to user, without needing to open or check individual sheet views
-updatedDwgTbs = []
-for sheet in dwgSheets:
+updated_dwg_titleblocks = []
+for sheet in dwg_sheets:
     tblocks = revit.query.get_sheet_tblocks(sheet)
-    updatedDwgTbs.extend([x.Id for x in tblocks])
+    updated_dwg_titleblocks.extend([x.Id for x in tblocks])
     for tblock in tblocks:
         print(
             sheet.SheetNumber,
