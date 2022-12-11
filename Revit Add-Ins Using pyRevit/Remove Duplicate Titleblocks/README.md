@@ -6,7 +6,7 @@ A series of 500+ Revit 3D model files was found to contain identical titleblock 
 
 In addition to duplicate titleblock objects, a critical legal disclaimer was not displayed consistenty on all sheets as needed.
 
-The **Remove Duplicate Titleblocks** tool:
+The [**Remove Duplicate Titleblocks**](https://github.com/williamlewis/autodesk-revit-tools/blob/main/Revit%20Add-Ins%20Using%20pyRevit/Remove%20Duplicate%20Titleblocks/Remove%20Duplicate%20Titleblocks_script.py) tool:
 1. Filter selects the relevant sheets
 2. Removes duplicate titleblock instances from those sheets
 3. Overwrites the related settings to ensure visibility of the legal text note
