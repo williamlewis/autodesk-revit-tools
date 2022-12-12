@@ -1,4 +1,5 @@
-# autodesk-revit-tools
+# autodesk-revit-tools (Professional)
+
 Assistive automations to accelerate workflow and facilitate user management for Revit.
 
 Autodesk Revit is a widespread, 3D Building Information Modeling ("BIM") software used in the practice of architectural design & construction.
@@ -44,13 +45,13 @@ Autodesk Revit is a widespread, 3D Building Information Modeling ("BIM") softwar
 ## Terminal Scripts for Revit User Managment
 <br/>
 
-- **Auto Reinstall Revit Add-In** - purge previous add-in files from all possible locations, replace with latest version, & run executable installation file from a Google shared drive location
+- [**Auto Reinstall Revit Add-In**](https://github.com/williamlewis/autodesk-revit-tools/blob/main/Terminal%20Scripts%20for%20Revit%20User%20Management/auto_reinstall_revit_addin.bat) - purge previous add-in files from all possible locations, replace with latest version, & run executable installation file from a Google shared drive location
 <br/>
 
-- **List Users from Filenames to Text** - convert set of filenames into a text file with linebreaks
+- [**List Users - Convert File Names to Text File**](https://github.com/williamlewis/autodesk-revit-tools/blob/main/Terminal%20Scripts%20for%20Revit%20User%20Management/list_file_names_in_text_file.py) - convert set of filenames into a text file with linebreaks
 <br/>
 
-- **List Users from File & Folder Names to Text** - convert set of filenames and directory names into a text file with linebreaks
+- [**List Users - Convert File & Folder Names to Text File**](https://github.com/williamlewis/autodesk-revit-tools/blob/main/Terminal%20Scripts%20for%20Revit%20User%20Management/list_file%26folder_names_in_text_file.py) - convert set of filenames and directory names into a text file with linebreaks
 <br/>
 
-- **List Users from Folder Names in Terminal** - list out all directory names with linebreaks, for copy/paste into a tracking document
+- [**List Users - Convert Folder Names to Terminal**](https://github.com/williamlewis/autodesk-revit-tools/blob/main/Terminal%20Scripts%20for%20Revit%20User%20Management/list_folder_names_in_terminal.py) - list out all directory names with linebreaks, for copy/paste into a tracking document
